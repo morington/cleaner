@@ -12,6 +12,10 @@ class Cleaner:
     chat_id: str
 
     def __init__(self, limit: int = 10):
+        """
+        Limit - определение размера словаря. Если мы укажем 10, то после добавления 10 сообщений он автоматически
+        начнет удалять первые в списке. Тем самым у нас будет фиксированный список удобный для удаления.
+        """
         if limit <= 0:
             raise ValueError('The limit cannot be less or equal to `0`')
 
